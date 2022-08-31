@@ -1,0 +1,298 @@
+:root {
+    --veryLightRed: hsl(355, 100%, 74%);
+    --lightRed: hsl(356, 100%, 66%);
+    --veryDarkBlue: hsl(208, 49%, 24%);
+    --veryDarkGrayishBlue: hsl(207, 13%, 34%);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    position: relative;
+}
+
+.landing {
+    background: linear-gradient(to left, hsl(353, 100%, 62%), hsl(13, 100%, 72%));
+    border-bottom-left-radius: 80px;
+    color: white;
+    overflow: hidden;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 150px;
+    align-items: center;
+}
+
+.nav h1 {
+    display: inline;
+    padding-right: 40px;
+}
+
+.nav a {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.nav img {
+    padding-right: 10px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+}
+
+.link div {
+    position: relative;
+}
+
+.link div .dropdown {
+    z-index: -1;
+    position: absolute;
+    background-color: white;
+    color: rgb(47, 46, 46);
+    font-size: 12px;
+    font-weight: 200;
+    padding: 15px 15px;
+    border-radius: 5px;
+    top: 20px;
+    box-shadow: 0 0 10px 0.2px rgb(121, 121, 121);
+}
+
+.link div:hover>.dropdown,
+.dropdown:hover {
+    z-index: 1;
+}
+
+.link .dropdown h4 {
+    padding: 7px 0;
+}
+
+.landing .login {
+    color: white;
+    border: none;
+    background-color: transparent;
+    font-weight: light;
+    opacity: 1;
+    font-size: 16px;
+    padding: 0 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 10px 25px;
+    margin-right: 10px;
+    font-weight: bolder;
+    transition: .3s;
+}
+
+.landing .login:hover {
+    background-color: white;
+    color: var(--lightRed)
+}
+
+.landing .signup {
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+    color: var(--lightRed);
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.landing .signup:hover {
+    background-color: rgb(255, 165, 165);
+    border: none;
+    color: white;
+}
+
+.landing .text {
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding-bottom: 150px;
+}
+
+.landing .text h1 {
+    letter-spacing: 1px;
+    font-size: 45px;
+    font-weight: 300;
+}
+
+.landing .text h4 {
+    color: white;
+    font-weight: lighter;
+    opacity: 0.7;
+    padding-bottom: 25px;
+}
+
+
+/*-----------main*******/
+
+.main {
+    padding: 150px 150px 0px 150px;
+    color: var(--veryDarkBlue);
+    overflow: hidden;
+}
+
+.main h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.main .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main .image {
+    width: 500px;
+    transform: translateY(-100px);
+}
+
+.main .text,
+.main .text {
+    padding-top: 150px;
+    width: 600px;
+    margin-right: 80px;
+}
+
+.main .text h3,
+.last .text h3 {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.main .text p,
+.last .text p {
+    margin-bottom: 80px;
+    color: var(--veryDarkGrayishBlue);
+    letter-spacing: 0.8px;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+
+/**********infra************/
+
+.infra {
+    padding: 50px 150px;
+    background-color: rgb(45, 46, 64);
+    border-radius: 0 100px 0 100px;
+    position: relative;
+    height: 500px;
+}
+
+.infra::after {
+    position: absolute;
+    content: "";
+    width: 66.7%;
+    height: 100%;
+    left: -100px;
+    top: 0;
+    transform: rotate(180deg);
+    background: url(images/bg-pattern-circles.svg);
+    z-index: 0;
+}
+
+.infra .mob {
+    z-index: 2;
+    position: absolute;
+    top: 30px;
+}
+
+.infra .text {
+    margin-top: 120px;
+    color: white;
+    opacity: 0.95;
+    width: 700px;
+    position: absolute;
+    right: 0;
+}
+
+.infra .text h1 {
+    margin-bottom: 30px;
+}
+
+.infra .text p {
+    width: 600px;
+    letter-spacing: 0.8px;
+    line-height: 1.5;
+    font-weight: 100;
+    font-size: 16px;
+    opacity: 0.6;
+}
+
+
+/********last****************/
+
+.last {
+    padding: 80px 150px 80px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--veryDarkBlue);
+}
+
+.last .text {
+    transform: translateX(-100px);
+}
+
+.last .image {
+    transform: translateX(-250px);
+}
+
+.last .text p {
+    width: 550px;
+}
+
+.last .text {
+    margin-top: 80px;
+}
+
+
+/*******************footer***************/
+
+.footer {
+    padding: 50px 50px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: hsl(240, 10%, 16%);
+    border-radius: 0 80px 0 0;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+.footer h4 {
+    opacity: 0.8;
+    padding: 10px 0;
+}
+
+.footer h6 {
+    margin: 15px 0;
+    opacity: .6;
+}
+
+.footer h6:hover {
+    text-decoration: underline;
+    color: white;
+    opacity: .8;
+    cursor: pointer;
+}
